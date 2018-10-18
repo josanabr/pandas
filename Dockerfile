@@ -1,4 +1,4 @@
-FROM josanabr/dockerflask2018
+FROM josanabr/flask
 
 MAINTAINER John Sanabria 
 
