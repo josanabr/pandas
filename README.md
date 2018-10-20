@@ -3,6 +3,7 @@
 ## Tabla de Contenidos
 
 - [Intro](#intro)
+- [Propuesta de *Web Service* a ser desarrollado](#propuesta-de-web-service-a-ser-desarrollado)
 
 ---
 
@@ -24,3 +25,20 @@ docker run --rm -it -v $(pwd):/myhome josanabr/pandas /bin/bash
 * Valide que en el directorio `/myhome` se encuentra el archivo `reading_csv.py`.
 
 * Para ejectuar este programa ejecute `python3 reading_csv.py`
+
+---
+
+## Propuesta de *Web Service* a ser desarrollado
+
+Tomando como base el archivo [`reading_csv.py`](reading_csv.py) vamos a construir un nuevo archivo en Python que nos permita exponer ciertas funciones de Pandas como *web services*.
+
+La idea es crear un *web service* que nos permita.
+
+* Instanciar un URL desde el cual se descarga un archivo CSV
+* El *web service* podra calcular las siguientes funciones de agregacion: media, la mediana, el minimo, el maximo; de un atributo de un `DataFrame`
+* Si se hace la consulta de alguna funcion de agregacion y no hay un `DataFrame` entonces se debe arrojar un error
+* El usuario puede solicitar del *web service* lo siguiente:
+  * La funcion de agregacion de un atributo del `DataFrame`
+  * Aplicacion la agregacion de todos los atributos del `DataFrame`
+* Las respuestas deben ser entregadas en formato JSON  
+
