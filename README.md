@@ -4,6 +4,7 @@
 
 - [Intro](#intro)
 - [Propuesta de *Web Service* a ser desarrollado](#propuesta-de-web-service-a-ser-desarrollado)
+- [Desarrollo del *Web Service*](#desarrollo-del-web-service)
 
 ---
 
@@ -42,3 +43,14 @@ La idea es crear un *web service* que nos permita.
   * Aplicacion la agregacion de todos los atributos del `DataFrame`
 * Las respuestas deben ser entregadas en formato JSON  
 
+---
+
+## Desarrollo del *Web Service*
+
+A continuacion se describe como llevar a cabo la implementacion del *web service* a partir de los requerimientos indicados anteriormente.
+Inicialmente se establece que el URI sera `/pandas/aggr/v1.0`. 
+Dicho esto, todos los URLs se construiran de la forma `http://<host>:<port>/pandas/aggr/v1.0`.
+Donde `<host>` y `<port>` para efectos de las pruebas sera `localhost` y `5000`, respectivamente.
+
+Ahora, se establece que el archivo donde residira nuestro *web service* sera llamado `pandas_ws.py`. 
+A continuacion se colocara la siguiente informacion en este archivo..
