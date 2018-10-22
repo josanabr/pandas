@@ -54,3 +54,20 @@ Donde `<host>` y `<port>` para efectos de las pruebas sera `localhost` y `5000`,
 
 Ahora, se establece que el archivo donde residira nuestro *web service* sera llamado `pandas_ws.py`. 
 A continuacion se colocara la siguiente informacion en este archivo..
+
+## Comandos docker a ejecutar
+
+```
+docker run --rm -it -v $(pwd):/myhome -p 5000:5000 josanabr/pandas /bin/bash
+```
+
+## Comandos curl a ejecutar
+
+
+```
+curl -i -H "Content-Type: application/json" -X POST -d '{"URL": "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"}' http://localhost:5000/pandas/aggr/v1.0
+```
+
+```
+curl -i -H "Content-Type: application/json" -X POST -d '{"Agregado": "mean", "Campo": "2"}' http://localhost:5000/pandas/aggr/v1.0/agregado
+```
