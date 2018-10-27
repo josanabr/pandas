@@ -71,3 +71,15 @@ curl -i -H "Content-Type: application/json" -X POST -d '{"URL": "http://archive.
 ```
 curl -i -H "Content-Type: application/json" -X POST -d '{"Agregado": "mean", "Campo": "2"}' http://localhost:5000/pandas/aggr/v1.0/agregado
 ```
+
+## Generando graficas
+
+```
+import matplotlib
+matplotlib.use('Agg')
+import pandas as pd
+df = pd.read_csv('https://raw.githubusercontent.com/jennybc/gapminder/master/inst/extdata/gapminder.tsv', sep='\t')
+lifeexpect = df.groupby('year')['lifeExp'].mean()
+fig = lifeexpect.plot().get_figure()
+fig.savefig('demo.png')
+```
